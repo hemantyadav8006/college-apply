@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
+import Streams from "../components/Streams";
+import PopularSpecialisations from "../components/PopularSpecialisations";
 import Features from "../components/Features";
 import Courses from "../components/Courses";
 import Footer from "../components/Footer";
@@ -20,6 +22,8 @@ const HomePage = () => {
     <>
       <Header onSearch={handleSearch} />
       <HeroSection />
+      <Streams />
+      <PopularSpecialisations />
       <Features />
       <Courses courses={searchResults || mockCourses} />
       <Footer />
@@ -38,6 +42,36 @@ const mockCourses = [
   },
   {
     id: 2,
+    title: "Content Marketing Certification",
+    price: "₹15,000",
+    duration: "60 hours",
+  },
+  {
+    id: 3,
+    title: "Content Marketing Certification",
+    price: "₹15,000",
+    duration: "60 hours",
+  },
+  {
+    id: 4,
+    title: "Content Marketing Certification",
+    price: "₹15,000",
+    duration: "60 hours",
+  },
+  {
+    id: 5,
+    title: "Content Marketing Certification",
+    price: "₹15,000",
+    duration: "60 hours",
+  },
+  {
+    id: 6,
+    title: "Content Marketing Certification",
+    price: "₹15,000",
+    duration: "60 hours",
+  },
+  {
+    id: 7,
     title: "Content Marketing Certification",
     price: "₹15,000",
     duration: "60 hours",
