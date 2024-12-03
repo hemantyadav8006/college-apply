@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IoMdArrowDropdown, IoIosSearch } from "react-icons/io";
 import { logo } from "../assets/Images/imageTransfer";
+import "../assets/css/Header.css";
 
 const Header = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -16,44 +17,44 @@ const Header = ({ onSearch }) => {
   };
 
   return (
-    <header className="bg-customBlue-default text-white flex justify-between items-center px-6 py-4">
+    <header className="bg-customBlue-default text-white flex justify-between items-center px-6 py-4 z-10 relative w-full">
       {/* Logo */}
       <div className="flex items-center space-x-2">
         <img src={logo} alt="Kollege Apply" className="w-15 h-8 ml-6 pl-10" />
       </div>
 
       {/* Navigation Menu */}
-      <nav className="hidden md:flex space-x-5 items-center text-sm">
+      <nav className="flex space-x-5 items-center text-sm navigation">
         <div className="relative group flex items-center space-x-1">
-          <a href="/management" className="hover:underline flex items-center">
+          <a href="#" className="hover:underline flex items-center">
             Management
           </a>
           <IoMdArrowDropdown />
         </div>
 
         <div className="relative group flex items-center space-x-1">
-          <a href="/technology" className="hover:underline flex items-center">
+          <a href="#" className="hover:underline flex items-center">
             Technology
           </a>
           <IoMdArrowDropdown />
         </div>
 
         <div className="relative group flex items-center space-x-1">
-          <a href="/technology" className="hover:underline flex items-center">
+          <a href="#" className="hover:underline flex items-center">
             Data Science
           </a>
           <IoMdArrowDropdown />
         </div>
 
         <div className="relative group flex items-center space-x-1">
-          <a href="/technology" className="hover:underline flex items-center">
+          <a href="#" className="hover:underline flex items-center">
             Finance
           </a>
           <IoMdArrowDropdown />
         </div>
 
         <div className="relative group flex items-center space-x-1">
-          <a href="/technology" className="hover:underline flex items-center">
+          <a href="#" className="hover:underline flex items-center">
             Creativity & Design
           </a>
           <IoMdArrowDropdown />
@@ -70,15 +71,15 @@ const Header = ({ onSearch }) => {
           {dropdownVisible && (
             <div className="absolute left-0 mt-2 w-40 bg-white text-black rounded shadow-lg">
               <a
-                href="/engineering"
+                href="#"
                 className="block px-4 py-2 hover:bg-gray-100"
               >
                 Engineering
               </a>
-              <a href="/medical" className="block px-4 py-2 hover:bg-gray-100">
+              <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                 Medical
               </a>
-              <a href="/design" className="block px-4 py-2 hover:bg-gray-100">
+              <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                 Design
               </a>
             </div>
@@ -87,20 +88,20 @@ const Header = ({ onSearch }) => {
       </nav>
 
       {/* Search Bar */}
-      <form onSubmit={handleSearch} className="flex space-x-2 items-center">
+      <form onSubmit={handleSearch} className="flex space-x-2 items-center mr-10">
         <input
           type="text"
           placeholder="Search"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="bg-customBluetransparent px-4 py-1 rounded-full outline-none text-white"
+          className="bg-customBluetransparent px-4 py-1 rounded-full outline-none text-white text-sm"
         />
-        <button
+        {/* <button
           type="submit"
           className="bg-orange-500 text-white px-4 py-1 rounded-full flex items-center hover:bg-orange-400"
         >
           <IoIosSearch className="mr-1" /> Search
-        </button>
+        </button> */}
       </form>
     </header>
   );
