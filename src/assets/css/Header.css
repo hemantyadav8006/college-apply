@@ -3,3 +3,28 @@
     display: none !important;
   }
 }
+
+@media (max-width: 430px) {
+  .nav-header {
+    display: flex;
+    justify-content: space-evenly !important;
+  }
+
+  .logo {
+    margin-right: 10px;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+  form {
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 330px) {
+  form {
+    margin-left: 10px;
+  }
+  form input {
+    width: 9rem;
+  }
+}

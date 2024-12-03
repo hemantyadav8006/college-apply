@@ -17,10 +17,10 @@ const Header = ({ onSearch }) => {
   };
 
   return (
-    <header className="bg-customBlue-default text-white flex justify-between items-center px-6 py-4 z-10 relative w-full">
+    <header className="bg-customBlue-default text-white flex justify-between items-center px-6 py-4 z-10 relative w-full nav-header">
       {/* Logo */}
       <div className="flex items-center space-x-2">
-        <img src={logo} alt="Kollege Apply" className="w-15 h-8 ml-6 pl-10" />
+        <img src={logo} alt="Kollege Apply" className="logo w-15 h-8 ml-6 pl-10" />
       </div>
 
       {/* Navigation Menu */}
