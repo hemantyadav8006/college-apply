@@ -1,0 +1,61 @@
+/* Container styles */
+.popular-streams {
+  background-color: #f9fafb;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+/* Title styles */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.section-title .highlight {
+  color: #ff6d00;
+}
+
+/* Stream cards container */
+.stream-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Individual stream card */
+.stream-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* .stream-card:hover {
+  transform: translateY(-5px);
+} */
+
+/* Stream icon */
+.stream-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stream-icon img {
+  padding: 15px;
+  background: #ffe7df;
+}
+
+/* Stream title */
+.stream-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
