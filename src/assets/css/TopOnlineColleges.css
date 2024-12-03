@@ -1,0 +1,94 @@
+/* Section container */
+.top-online-colleges {
+  background-color: #ffe9e1;
+  width: 95%;
+  margin-left: 2vw;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+/* Section title */
+.section-title1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.section-title1 .highlight {
+  color: #ff6d00;
+}
+
+/* Carousel container */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Carousel button */
+.carousel-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.carousel-button:hover {
+  color: #ff6d00;
+}
+
+/* Carousel */
+.carousel {
+  overflow: hidden;
+  width: 80%;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Carousel item */
+.carousel-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 calc(100% / 4);
+  height: 9rem;
+}
+
+.college-logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.college-name {
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* View all link */
+.view-all a {
+  color: #ff6d00;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.view-all a:hover {
+  text-decoration: underline;
+}

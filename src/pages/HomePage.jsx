@@ -3,6 +3,8 @@ import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import Streams from "../components/Streams";
 import PopularSpecialisations from "../components/PopularSpecialisations";
+import TopOnlineColleges from "../components/TopOnlineColleges";
+import CareerAdvisorSection from "../components/CareerAdvisorSection";
 import Features from "../components/Features";
 import Courses from "../components/Courses";
 import Footer from "../components/Footer";
@@ -24,6 +26,8 @@ const HomePage = () => {
       <HeroSection />
       <Streams />
       <PopularSpecialisations />
+      <TopOnlineColleges />
+      <CareerAdvisorSection />
       <Features />
       <Courses courses={searchResults || mockCourses} />
       <Footer />
