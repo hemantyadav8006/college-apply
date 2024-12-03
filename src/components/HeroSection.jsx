@@ -57,12 +57,12 @@ const HeroSection = () => {
           (component) => component.id === prev
         );
         const nextIndex =
-          (currentIndex + 1) % componentsData.length; // Loop back to the first component
+          (currentIndex + 1) % componentsData.length; 
         return componentsData[nextIndex].id;
       });
-    }, 3000); // Change every 3 seconds
+    }, 3000);
 
-    return () => clearInterval(interval); // Cleanup interval on component unmount
+    return () => clearInterval(interval);
   }, []);
 
   const selectedData = componentsData.find(
@@ -82,7 +82,6 @@ const HeroSection = () => {
               className={`component-item align-middle shadow-lg rounded-l-full ${
                 selectedComponent === component.id ? "active" : ""
               }`}
-              // onClick={() => setSelectedComponent(component.id)}
             >
               <div className="component-icon"><img src={component.icon} alt="" /></div>
               <div className="flex flex-col box-title">
@@ -94,7 +93,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="hero-image absolute">
+      <div className="hero-image absolute animate-pulse">
         <img
         src={selectedData.image} 
         alt={selectedData.title} />
