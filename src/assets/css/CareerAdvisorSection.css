@@ -1,0 +1,65 @@
+.career-advisor-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff875f;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  width: 95%;
+  margin-left: 2vw;
+  height: 87px;
+}
+
+.carouselImage {
+  width: 1440px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button-group {
+  margin-left: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.get-updates {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.get-updates:hover {
+  background-color: white;
+  color: #ff7043;
+}
+
+.get-callback {
+  background-color: white;
+  color: #ff7043;
+  position: relative;
+}
+
+.get-callback:hover {
+  background-color: #ffd7c2;
+}
+
+.free-badge {
+  position: fixed;
+  right: 25%;
+  top: -6%;
+}

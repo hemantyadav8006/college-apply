@@ -23,6 +23,8 @@ import icon5 from "./TopOnlineColleges/icon5.png";
 import icon6 from "./TopOnlineColleges/icon6.png";
 import ButtonNext from "./TopOnlineColleges/ButtonNext.png";
 import ButtonPrevious from "./TopOnlineColleges/ButtonPrevious.png";
+import freeIcon from "./freeIcon.png"
+import careerBackground from "./careerBackground.png"
 export {
   flexibilityImg,
   accessibilityImg,
@@ -49,4 +51,6 @@ export {
   icon6,
   ButtonNext,
   ButtonPrevious,
+  careerBackground,
+  freeIcon,
 };
