@@ -92,3 +92,20 @@
 .view-all a:hover {
   text-decoration: underline;
 }
+
+@media screen and (max-width: 430px) {
+  .top-online-colleges {
+    padding: 2rem 0;
+  }
+
+  .carousel-button {
+    padding: 0.5rem 3px;
+  }
+
+  .carousel-track {
+    gap: 5px;
+  }
+  .carousel-item {
+    height: 100%;
+  }
+}
