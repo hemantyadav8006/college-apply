@@ -56,8 +56,7 @@ const HeroSection = () => {
         const currentIndex = componentsData.findIndex(
           (component) => component.id === prev
         );
-        const nextIndex =
-          (currentIndex + 1) % componentsData.length; 
+        const nextIndex = (currentIndex + 1) % componentsData.length;
         return componentsData[nextIndex].id;
       });
     }, 3000);
@@ -70,10 +69,11 @@ const HeroSection = () => {
   );
 
   return (
-    <div className="hero-section relative mt-10 mb-40">
+    <div className="hero-section relative mt-10 mb-44">
       <div className="hero-content">
         <h1 className="text-6xl font-bold text-gray-800 mt-5 ml-20 z-50">
-          Why Opt for <br /> <span className="text-customBlue-light">Online Learning?</span>
+          Why Opt for <br />{" "}
+          <span className="text-customBlue-light">Online Learning?</span>
         </h1>
         <div className="components-list z-10">
           {componentsData.map((component) => (
@@ -83,7 +83,9 @@ const HeroSection = () => {
                 selectedComponent === component.id ? "active" : ""
               }`}
             >
-              <div className="component-icon"><img src={component.icon} alt="" /></div>
+              <div className="component-icon">
+                <img src={component.icon} alt="" />
+              </div>
               <div className="flex flex-col box-title">
                 <h3 className="font-bold">{component.title}</h3>
                 <p>{component.description}</p>
@@ -94,9 +96,7 @@ const HeroSection = () => {
       </div>
 
       <div className="hero-image absolute animate-pulse">
-        <img
-        src={selectedData.image} 
-        alt={selectedData.title} />
+        <img src={selectedData.image} alt={selectedData.title} />
       </div>
     </div>
   );
