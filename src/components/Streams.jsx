@@ -22,13 +22,14 @@ const PopularStreams = () => {
   ];
 
   return (
-    <div className="popular-streams">
+    <div className="popular-streams w-full">
       <h2 className="section-title">
         <span className="highlight">Popular</span> Streams
       </h2>
-      <div className="stream-cards">
+
+      <div className="stream-cards flex items-center justify-start gap-4 flex-nowrap overflow-x-auto">
         {streams.map((stream, index) => (
-          <div key={index} className="stream-card">
+          <div key={index} className="stream-card flex-shrink-0">
             <div className="stream-icon">
               <img src={stream.icon} alt={stream.title} />
             </div>
