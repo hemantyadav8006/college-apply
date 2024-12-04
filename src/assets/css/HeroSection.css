@@ -59,16 +59,17 @@
 
 .hero-image img {
   max-width: 100%;
-  animation: fadeZoom 1s ease-in-out;
+  animation: float 1s infinite ease-in-out;
 }
 
-@keyframes fadeZoom {
+@keyframes float {
   0% {
-    opacity: 0;
-    transform: translateY(20%);
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
   100% {
-    opacity: 1;
     transform: translateY(0);
   }
 }
