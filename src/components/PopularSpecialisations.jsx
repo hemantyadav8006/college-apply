@@ -1,6 +1,6 @@
 import "../assets/css/PopularSpecialisations.css";
 import React, { useState } from "react";
-import arrow from "../assets/Images/arrow.png";
+import { arrow, pin } from "../assets/Images/imageTransfer.js";
 const PopularSpecialisations = () => {
   const categories = ["Management", "Engineering", "Medical", "Label", "Label"];
   const [activeCategory, setActiveCategory] = useState("Management");
@@ -29,7 +29,8 @@ const PopularSpecialisations = () => {
       <h2 className="section-title">
         Most Popular <span className="highlight">Specialisations</span>
       </h2>
-      <div className="categories">
+      <div className="categories relative">
+        <img className="absolute -left-3 -top-1" src={pin} alt="pin" />
         {categories.map((category, index) => (
           <button
             key={index}
@@ -47,7 +48,7 @@ const PopularSpecialisations = () => {
           <div key={index} className="course-card">
             <p className="course-title">{course.title}</p>
             <span className="course-icon">
-              <img src={arrow} alt="" />
+              <img src={arrow} alt="arrow" />
             </span>
           </div>
         ))}

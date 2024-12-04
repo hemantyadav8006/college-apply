@@ -31,6 +31,8 @@ import star from "./CoursesSection/Star.png";
 import rupee from "./CoursesSection/rupee.png";
 import scholar from "./CoursesSection/scholar.png";
 import file from "./CoursesSection/file.png";
+import pin from "./pin.png";
+import arrow from "./arrow.png";
 
 export {
   flexibilityImg,
@@ -66,4 +68,6 @@ export {
   rupee,
   scholar,
   file,
+  pin,
+  arrow,
 };
