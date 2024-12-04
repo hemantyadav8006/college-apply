@@ -18,6 +18,10 @@
 }
 
 /* Categories */
+.categories::-webkit-scrollbar {
+  display: none;
+}
+
 .categories {
   display: flex;
   gap: 0.5rem;

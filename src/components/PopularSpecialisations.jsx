@@ -2,7 +2,16 @@ import "../assets/css/PopularSpecialisations.css";
 import React, { useState } from "react";
 import { arrow, pin } from "../assets/Images/imageTransfer.js";
 const PopularSpecialisations = () => {
-  const categories = ["Management", "Engineering", "Medical", "Label", "Label"];
+  const categories = [
+    "Management",
+    "• Engineering",
+    "• Medical",
+    "• Accountant",
+    "• Label",
+    "• Label",
+    "• Label",
+    "• Label",
+  ];
   const [activeCategory, setActiveCategory] = useState("Management");
 
   const courses = [
@@ -29,12 +38,12 @@ const PopularSpecialisations = () => {
       <h2 className="section-title">
         Most Popular <span className="highlight">Specialisations</span>
       </h2>
-      <div className="categories relative">
+      <div className="categories relative flex items-center justify-start gap-4 flex-nowrap overflow-x-auto">
         <img className="absolute -left-3 -top-1" src={pin} alt="pin" />
         {categories.map((category, index) => (
           <button
             key={index}
-            className={`category-button ${
+            className={`category-button flex-shrink-0 ${
               activeCategory === category ? "active" : ""
             }`}
             onClick={() => setActiveCategory(category)}
