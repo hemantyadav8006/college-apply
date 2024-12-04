@@ -25,8 +25,13 @@ import icon5 from "./TopOnlineColleges/icon5.png";
 import icon6 from "./TopOnlineColleges/icon6.png";
 import ButtonNext from "./TopOnlineColleges/ButtonNext.png";
 import ButtonPrevious from "./TopOnlineColleges/ButtonPrevious.png";
-import freeIcon from "./freeIcon.png";
-import careerBackground from "./careerBackground.png";
+import freeIcon from "./CareerAdvisorSection/freeIcon.png";
+import careerBackground from "./CareerAdvisorSection/careerBackground.png";
+import star from "./CoursesSection/Star.png";
+import rupee from "./CoursesSection/rupee.png";
+import scholar from "./CoursesSection/scholar.png";
+import file from "./CoursesSection/file.png";
+
 export {
   flexibilityImg,
   accessibilityImg,
@@ -57,4 +62,8 @@ export {
   ButtonPrevious,
   careerBackground,
   freeIcon,
+  star,
+  rupee,
+  scholar,
+  file,
 };

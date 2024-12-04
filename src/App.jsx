@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import CourseDetails from "./pages/CourseDetails";
 import "./assets/css/App.css";
 
 function App() {
@@ -8,7 +7,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/course/:id" element={<CourseDetails />} />
       </Routes>
     </Router>
   );

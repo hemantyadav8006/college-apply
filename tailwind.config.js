@@ -13,6 +13,7 @@ export default {
         }, 
         customBluetransparent: '#31476a',
         customGray: '#D3D3D3',
+        customGrayLight: '#f2f4f7',
       },
     },
   },
