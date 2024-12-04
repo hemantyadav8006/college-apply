@@ -102,18 +102,14 @@ const Courses = () => {
 
       <div className="courses-container">
         <div className="flex w-full align-middle gap-2 btns">
+          <button className="btn-filter rounded-full text-black">Filter</button>
+          <button className="btn-filter rounded-full text-black">Stream</button>
           <button className="btn-filter rounded-full text-black">
-            Filter ⚙️
-          </button>
-          <button className="btn-filter rounded-full text-black">
-            Stream {">"}
-          </button>
-          <button className="btn-filter rounded-full text-black">
-            Courses {">"}
+            Courses
           </button>
         </div>
         <div className="filters shadow-md">
-          <h4>Filters</h4>
+          <h4 className="font-semibold">Filters</h4>
           {/* Search Bar */}
           <form onSubmit={handleSearch} className="flex items-center mr-10">
             <input
