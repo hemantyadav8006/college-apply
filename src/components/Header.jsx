@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IoMdArrowDropdown, IoIosSearch } from "react-icons/io";
 import { logo } from "../assets/Images/imageTransfer";
+import { motion } from "motion/react";
 import "../assets/css/Header.css";
 
 const Header = ({ onSearch }) => {
@@ -19,12 +20,26 @@ const Header = ({ onSearch }) => {
   return (
     <header className="bg-customBlue-default text-white flex justify-between items-center px-6 py-4 z-10 relative w-full nav-header">
       {/* Logo */}
-      <div className="flex items-center space-x-2">
-        <img src={logo} alt="Kollege Apply" className="logo w-15 h-8 ml-6 pl-10" />
-      </div>
+      <motion.div
+        className="flex items-center space-x-2"
+        initial={{ x: -500 }}
+        animate={{ x: 0 }}
+        transition={{ delay: 0.5 }}
+      >
+        <img
+          src={logo}
+          alt="Kollege Apply"
+          className="logo w-15 h-8 ml-6 pl-10"
+        />
+      </motion.div>
 
       {/* Navigation Menu */}
-      <nav className="flex space-x-5 items-center text-sm navigation">
+      <motion.nav
+        className="flex space-x-5 items-center text-sm navigation"
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ delay: 0.6 }}
+      >
         <div className="relative group flex items-center space-x-1">
           <a href="#" className="hover:underline flex items-center">
             Management
@@ -70,10 +85,7 @@ const Header = ({ onSearch }) => {
           <IoMdArrowDropdown />
           {dropdownVisible && (
             <div className="absolute left-0 mt-2 w-40 bg-white text-black rounded shadow-lg">
-              <a
-                href="#"
-                className="block px-4 py-2 hover:bg-gray-100"
-              >
+              <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                 Engineering
               </a>
               <a href="#" className="block px-4 py-2 hover:bg-gray-100">
@@ -85,10 +97,16 @@ const Header = ({ onSearch }) => {
             </div>
           )}
         </div>
-      </nav>
+      </motion.nav>
 
       {/* Search Bar */}
-      <form onSubmit={handleSearch} className="flex space-x-2 items-center mr-10">
+      <motion.form
+        onSubmit={handleSearch}
+        className="flex space-x-2 items-center mr-10"
+        initial={{ x: 500 }}
+        animate={{ x: 0 }}
+        transition={{ delay: 0.5 }}
+      >
         <input
           type="text"
           placeholder="Search"
@@ -102,7 +120,7 @@ const Header = ({ onSearch }) => {
         >
           <IoIosSearch className="mr-1" /> Search
         </button> */}
-      </form>
+      </motion.form>
     </header>
   );
 };
