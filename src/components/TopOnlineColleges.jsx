@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "motion/react";
 import "../assets/css/TopOnlineColleges.css";
 import {
   icon,
@@ -48,13 +49,17 @@ const TopOnlineColleges = () => {
 
   return (
     <div className="top-online-colleges">
-      <h2 className="section-title1">
+      <motion.h2 className="section-title1" animate={{ scale: 1.2 }}>
         Top <span className="highlight">Online Colleges</span>
-      </h2>
+      </motion.h2>
       <div className="carousel-container">
-        <button className="carousel-button prev" onClick={handlePrev}>
+        <motion.button
+          className="carousel-button prev"
+          onClick={handlePrev}
+          whileTap={{ scale: 0.85 }}
+        >
           <img src={ButtonPrevious} alt="" />
-        </button>
+        </motion.button>
         <div className="carousel">
           <div
             className="carousel-track"
@@ -74,9 +79,13 @@ const TopOnlineColleges = () => {
             ))}
           </div>
         </div>
-        <button className="carousel-button next" onClick={handleNext}>
+        <motion.button
+          className="carousel-button next"
+          onClick={handleNext}
+          whileTap={{ scale: 0.85 }}
+        >
           <img src={ButtonNext} alt="" />
-        </button>
+        </motion.button>
       </div>
       <p className="view-all">
         <a href="#">View all colleges &#x2192;</a>
