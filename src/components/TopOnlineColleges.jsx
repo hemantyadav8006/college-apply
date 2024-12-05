@@ -49,9 +49,9 @@ const TopOnlineColleges = () => {
 
   return (
     <div className="top-online-colleges">
-      <motion.h2 className="section-title1" animate={{ scale: 1.2 }}>
+      <h2 className="section-title1">
         Top <span className="highlight">Online Colleges</span>
-      </motion.h2>
+      </h2>
       <div className="carousel-container">
         <motion.button
           className="carousel-button prev"

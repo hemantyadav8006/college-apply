@@ -1,4 +1,5 @@
 import "../assets/css/CoursesSection.css";
+import { motion } from "motion/react";
 import React, { useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import { star, rupee, scholar, file } from "../assets/Images/imageTransfer.js";
@@ -119,21 +120,23 @@ const Courses = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
               className="bg-customGrayLight px-4 rounded-s-md outline-none text-sm search"
             />
-            <button
+            <motion.button
               type="submit"
               className="bg-orange-500 text-white px-3 py-2 rounded-md flex items-center hover:bg-orange-400"
+              whileTap={{ scale: 0.85 }}
             >
               <IoIosSearch />
-            </button>
+            </motion.button>
           </form>
           {filters.map((filterCategory) => (
             <div
               key={filterCategory.type}
-              className="filter-category shadow-sm"
+              className="filter-category shadow-sm my-6"
             >
-              <h5
+              <motion.h5
                 className="filter-header"
                 onClick={() => toggleFilter(filterCategory.type)}
+                whileTap={{ scale: 0.95 }}
               >
                 {filterCategory.type}
                 <span
@@ -143,7 +146,7 @@ const Courses = () => {
                 >
                   {">"}
                 </span>
-              </h5>
+              </motion.h5>
               {expandedFilter === filterCategory.type && (
                 <div className="filter-options">
                   {filterCategory.options.map((option) => (
@@ -173,7 +176,11 @@ const Courses = () => {
           </div>
           <div className="courses-grid">
             {courses.map((course, index) => (
-              <div key={index} className="course-card1">
+              <motion.div
+                key={index}
+                className="course-card1"
+                whileHover={{ scale: 1.02 }}
+              >
                 <h3>{course.title}</h3>
                 <p className="flex">
                   <span className="text-orange-400 text-sm mr-1 mt-1">
@@ -204,11 +211,14 @@ const Courses = () => {
                 </p>
                 <div className="features">{course.features}</div>
                 <div className="flex w-full justify-end align-middle my-3">
-                  <button className="enroll-btn rounded-full text-black">
+                  <motion.button
+                    className="enroll-btn rounded-full text-black"
+                    whileTap={{ scale: 0.85 }}
+                  >
                     Enroll Now →
-                  </button>
+                  </motion.button>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
