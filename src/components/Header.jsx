@@ -40,42 +40,66 @@ const Header = ({ onSearch }) => {
         animate={{ y: 0 }}
         transition={{ delay: 0.6 }}
       >
-        <div className="relative group flex items-center space-x-1">
+        <motion.div
+          className="relative group flex items-center space-x-1"
+          whileHover={{ scale: 1.1, originX: 0, color: "#ffe7df" }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
           <a href="#" className="hover:underline flex items-center">
             Management
           </a>
           <IoMdArrowDropdown />
-        </div>
+        </motion.div>
 
-        <div className="relative group flex items-center space-x-1">
+        <motion.div
+          className="relative group flex items-center space-x-1"
+          whileHover={{ scale: 1.1, originX: 0, color: "#ffe7df" }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
           <a href="#" className="hover:underline flex items-center">
             Technology
           </a>
           <IoMdArrowDropdown />
-        </div>
+        </motion.div>
 
-        <div className="relative group flex items-center space-x-1">
+        <motion.div
+          className="relative group flex items-center space-x-1"
+          whileHover={{ scale: 1.1, originX: 0, color: "#ffe7df" }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
           <a href="#" className="hover:underline flex items-center">
             Data Science
           </a>
           <IoMdArrowDropdown />
-        </div>
+        </motion.div>
 
-        <div className="relative group flex items-center space-x-1">
+        <motion.div
+          className="relative group flex items-center space-x-1"
+          whileHover={{ scale: 1.1, originX: 0, color: "#ffe7df" }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
           <a href="#" className="hover:underline flex items-center">
             Finance
           </a>
           <IoMdArrowDropdown />
-        </div>
+        </motion.div>
 
-        <div className="relative group flex items-center space-x-1">
+        <motion.div
+          className="relative group flex items-center space-x-1"
+          whileHover={{ scale: 1.1, originX: 0, color: "#ffe7df" }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
           <a href="#" className="hover:underline flex items-center">
             Creativity & Design
           </a>
           <IoMdArrowDropdown />
-        </div>
+        </motion.div>
 
-        <div className="relative group flex items-center space-x-1">
+        <motion.div
+          className="relative group flex items-center space-x-1"
+          whileHover={{ scale: 1.1, originX: 0, color: "#ffe7df" }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
           <button
             className="hover:underline flex items-center"
             onClick={toggleDropdown}
@@ -96,7 +120,7 @@ const Header = ({ onSearch }) => {
               </a>
             </div>
           )}
-        </div>
+        </motion.div>
       </motion.nav>
 
       {/* Search Bar */}
@@ -107,12 +131,14 @@ const Header = ({ onSearch }) => {
         animate={{ x: 0 }}
         transition={{ delay: 0.5 }}
       >
-        <input
+        <motion.input
           type="text"
           placeholder="Search"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="bg-customBluetransparent px-4 py-1 rounded-full outline-none text-white text-sm"
+          whileHover={{ scale: 1.01, originX: 0 }}
+          transition={{ type: "spring", stiffness: 300 }}
         />
         {/* <button
           type="submit"
