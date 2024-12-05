@@ -18,7 +18,12 @@ const Header = ({ onSearch }) => {
   };
 
   return (
-    <header className="bg-customBlue-default text-white flex justify-between items-center px-6 py-4 z-10 relative w-full nav-header">
+    <motion.header
+      className="bg-customBlue-default text-white flex justify-between items-center px-6 py-4 z-10 relative w-full nav-header"
+      initial={{ y: -500 }}
+      animate={{ y: 0 }}
+      transition={{ delay: 0.3 }}
+    >
       {/* Logo */}
       <motion.div
         className="flex items-center space-x-2"
@@ -147,7 +152,7 @@ const Header = ({ onSearch }) => {
           <IoIosSearch className="mr-1" /> Search
         </button> */}
       </motion.form>
-    </header>
+    </motion.header>
   );
 };
 
