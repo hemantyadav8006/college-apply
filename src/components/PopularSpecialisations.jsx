@@ -1,14 +1,15 @@
 import "../assets/css/PopularSpecialisations.css";
 import React, { useState } from "react";
 import { arrow, pin } from "../assets/Images/imageTransfer.js";
+import { motion } from "motion/react";
 const PopularSpecialisations = () => {
   const categories = [
     "Management",
     "• Engineering",
     "• Medical",
     "• Accountant",
-    "• Label",
-    "• Label",
+    "• Computer Science",
+    "• Mathematics",
     "• Label",
     "• Label",
   ];
@@ -41,25 +42,30 @@ const PopularSpecialisations = () => {
       <div className="categories relative flex items-center justify-start gap-4 flex-nowrap overflow-x-auto">
         <img className="absolute -left-3 -top-1" src={pin} alt="pin" />
         {categories.map((category, index) => (
-          <button
+          <motion.button
             key={index}
             className={`category-button flex-shrink-0 ${
               activeCategory === category ? "active" : ""
             }`}
             onClick={() => setActiveCategory(category)}
+            whileTap={{ scale: 0.55 }}
           >
             {category}
-          </button>
+          </motion.button>
         ))}
       </div>
       <div className="course-list">
         {courses.map((course, index) => (
-          <div key={index} className="course-card">
+          <motion.div
+            key={index}
+            className="course-card cursor-pointer"
+            whileTap={{ scale: 0.55 }}
+          >
             <p className="course-title">{course.title}</p>
             <span className="course-icon">
               <img src={arrow} alt="arrow" />
             </span>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
