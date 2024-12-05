@@ -9,6 +9,12 @@ const Courses = () => {
   const [expandedFilter, setExpandedFilter] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
 
+  const [display, setDisplay] = useState(false);
+
+  const showDisplay = () => {
+    setDisplay((prevDisplay) => !prevDisplay);
+  };
+
   const handleSearch = (e) => {
     e.preventDefault();
     onSearch(searchQuery);
@@ -103,13 +109,27 @@ const Courses = () => {
 
       <div className="courses-container">
         <div className="flex w-full align-middle gap-2 btns">
-          <button className="btn-filter rounded-full text-black">Filter</button>
-          <button className="btn-filter rounded-full text-black">Stream</button>
-          <button className="btn-filter rounded-full text-black">
+          <motion.button
+            className="btn-filter rounded-full text-black"
+            onClick={showDisplay}
+            whileTap={{ scale: 0.85 }}
+          >
+            Filter
+          </motion.button>
+          <motion.button
+            className="btn-filter rounded-full text-black"
+            whileTap={{ scale: 0.85 }}
+          >
+            Stream
+          </motion.button>
+          <motion.button
+            className="btn-filter rounded-full text-black"
+            whileTap={{ scale: 0.85 }}
+          >
             Courses
-          </button>
+          </motion.button>
         </div>
-        <div className="filters shadow-md">
+        <div className={`filters shadow-md  ${display ? "hidden" : "block"}`}>
           <h4 className="font-semibold">Filters</h4>
           {/* Search Bar */}
           <form onSubmit={handleSearch} className="flex items-center mr-10">
