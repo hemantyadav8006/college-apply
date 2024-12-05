@@ -8,7 +8,7 @@ import {
   herosection3,
   herosection4,
 } from "../assets/Images/imageTransfer.js";
-
+import { motion } from "motion/react";
 import React, { useState, useEffect } from "react";
 import "../assets/css/HeroSection.css";
 
@@ -71,17 +71,25 @@ const HeroSection = () => {
   return (
     <div className="hero-section relative mt-10 mb-44">
       <div className="hero-content">
-        <h1 className="text-6xl font-bold text-gray-800 mt-5 ml-20 z-50">
+        <motion.h1
+          className="text-6xl font-bold text-gray-800 mt-5 ml-20 z-50"
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 1.5 }}
+        >
           Why Opt for <br />{" "}
           <span className="text-customBlue-light">Online Learning?</span>
-        </h1>
+        </motion.h1>
         <div className="components-list z-10">
           {componentsData.map((component) => (
-            <div
+            <motion.div
               key={component.id}
               className={`component-item align-middle shadow-lg rounded-l-full ${
                 selectedComponent === component.id ? "active" : ""
               }`}
+              initial={{ x: 550 }}
+              animate={{ x: 0 }}
+              transition={{ delay: 1.2 }}
             >
               <div className="component-icon">
                 <img src={component.icon} alt="" />
@@ -90,14 +98,19 @@ const HeroSection = () => {
                 <h3 className="font-bold">{component.title}</h3>
                 <p>{component.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
 
-      <div className="hero-image absolute animate-pulse">
+      <motion.div
+        className="hero-image absolute animate-pulse"
+        initial={{ x: -1550 }}
+        animate={{ x: 0 }}
+        transition={{ delay: 1.5 }}
+      >
         <img src={selectedData.image} alt={selectedData.title} />
-      </div>
+      </motion.div>
     </div>
   );
 };
