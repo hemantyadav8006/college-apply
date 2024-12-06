@@ -25,18 +25,24 @@
 - **Prerequisites**
 - **Node.js and npm installed on your system.**
 
+---
+
 ## Clone the Repository:
 
 ```bash
-    git clone https://github.com/hemantyadav8006/college-apply
-    cd college-apply
+git clone https://github.com/hemantyadav8006/college-apply
+cd college-apply
 ```
+
+---
 
 ## Install Dependencies
 
 ```bash
 npm install
 ```
+
+---
 
 ## Start the Development Server
 
@@ -48,4 +54,4 @@ npm run dev
 
 ## View the Application:
 
-- **Open your browser and go to http://localhost:3000.**
+- **Open your browser and go to http://localhost:5173.**
